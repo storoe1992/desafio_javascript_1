@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Colores</title>
+    <style>
+      #box {
+        width: 170px;
+        height: 170px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div id="box"></div>
+    <button id="green">Verde</button>
+    <button id="yellow">Amarillo</button>
+    <button id="red">Rojo</button>
+    <button id="100px">100px</button>
+    <button id="400px">400px</button>
+    <script>
+      var caja = document.getElementById("box");
+      var verde = document.getElementById("green");
+      var amarillo = document.getElementById("yellow");
+      var rojo = document.getElementById("red");
+      var px100 = document.getElementById("100px");
+      var px400 = document.getElementById("400px");
+      verde.addEventListener("click", function () {
+        cambiar_color("green");
+      });
+      amarillo.addEventListener("click", function () {
+        cambiar_color("yellow");
+      });
+      rojo.addEventListener("click", function () {
+        cambiar_color("red");
+      });
+      px100.addEventListener("click",function(){
+        cambiar_tamano(100,100);
+      });
+      px400.addEventListener("click",function(){
+        cambiar_tamano(400,400);
+      });
+      function cambiar_color(color) {
+        caja.style.backgroundColor = color;
+      }
+      function cambiar_tamano(width,heigth){
+          caja.style.width = width + "px";
+          caja.style.height = heigth = "px";
+      }
+    </script>
+  </body>
+</html>
